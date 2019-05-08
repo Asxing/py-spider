@@ -1,5 +1,8 @@
 import urllib.request
 
+'''
+循环调用,异常捕捉
+'''
 for i in range(1, 100):
     try:
         # file = urllib.request.urlopen("http://www.baidu.com", timeout=1)

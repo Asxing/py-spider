@@ -1,5 +1,10 @@
 import urllib.request
 
+'''
+本节目标:
+文件读取和写入
+'''
+
 file = urllib.request.urlopen("http://www.baidu.com")
 
 # 读取文件
