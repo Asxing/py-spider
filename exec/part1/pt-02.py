@@ -3,6 +3,7 @@ import urllib.request
 '''
 另一种爬取文件内容的方式
 '''
+
 filename = urllib.request.urlretrieve(
     "http://edu.51cto.com", filename="2.html")
 
