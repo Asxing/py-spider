@@ -1,14 +1,12 @@
 import urllib.request
 
-filename = urllib.request.urlretrieve("http://edu.51cto.com", filename="2.html")
-
-# 进行解码
-urllib.request.unquote("http%3A//www.sina.com.cn")
-# 解码爬虫
-# filename = urllib.request.urlretrieve(urllib.request.unquote("http%3A//www.sina.com.cn"), filename="2.html")
-
-# 进行编码
-urllib.request.quote("http://www.sina.com.cn")
-
-# 使用 urlretrieve 可以直接下载，这种方式直接下载文件，没有业务处理
-urllib.request.urlcleanup()
+url = "https://juejin.im/"
+headers = ("User-Agent",
+           "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.122 Safari/537.36 SE 2.X MetaSr 1.0")
+# 借助 opener 代理
+opener = urllib.request.build_opener()
+opener.addheaders = [headers]
+#
+# 使用 opener 进行读取
+data = opener.open(url).read()
+print(data)
